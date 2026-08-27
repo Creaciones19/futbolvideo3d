@@ -2096,7 +2096,7 @@ footer .footerPlayer .bodyKickerVideo{
    Se reduce SOLO su contenido visual, no el contenedor ni la lógica. */
 .academySection .sectionPlayer .bodyKickerVideo.playerWhiteLarge,
 footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
-  transform:scale(.80) !important;
+  transform:scale(.85) !important;
   transform-origin:50% 100% !important;
 }
 
@@ -2111,9 +2111,53 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 @media(max-width:600px){
   .academySection .sectionPlayer .bodyKickerVideo.playerWhiteLarge,
   footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
-    transform:scale(.76) !important;
+    transform:scale(.85) !important;
     transform-origin:50% 100% !important;
   }
+}
+
+
+/* ===== V54 — BLANCO IZQUIERDO: MISMO TAMAÑO VISUAL QUE LOS DEMÁS ===== */
+.academySection .sectionPlayer .bodyKickerVideo.playerWhiteLarge,
+footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
+  transform:scale(.85) !important;
+  transform-origin:50% 100% !important;
+}
+@media(max-width:600px){
+  .academySection .sectionPlayer .bodyKickerVideo.playerWhiteLarge,
+  footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
+    transform:scale(.85) !important;
+    transform-origin:50% 100% !important;
+  }
+}
+
+
+/* ===== AJUSTE FINAL DE TAMAÑO VISUAL =====
+   El video blanco viene encuadrado más cerca que los demás.
+   Se compensa UNA sola vez y con la MISMA escala en todos los dispositivos.
+*/
+.academySection .sectionPlayer .bodyKickerVideo.playerWhiteLarge,
+footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
+  transform:scale(.85) !important;
+  transform-origin:50% 100% !important;
+}
+@media(max-width:900px){
+  .academySection .sectionPlayer .bodyKickerVideo.playerWhiteLarge,
+  footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
+    transform:scale(.85) !important;
+  }
+}
+
+
+/* ===== V55 — VIDEO REAL SOBRE POSTER ===== */
+.bodyKickerVideo{
+  opacity:1 !important;
+  visibility:visible !important;
+}
+.bodyFieldVideo,
+.footerFieldVideo{
+  opacity:1 !important;
+  visibility:visible !important;
 }
 
 </style>
@@ -2260,10 +2304,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection1" id="visoria">
       <button class="player sectionPlayer bodyVideoPlayer sectionPlayerLeft right" data-face="right" aria-label="Jugador 1">
-        <video poster="jugador_01.png" preload="none" class="bodyKickerVideo" muted playsinline aria-label="Futbolista pateando" data-src="jugador_01.webm"></video>
+        <video poster="jugador_01.png" preload="metadata" class="bodyKickerVideo" muted playsinline aria-label="Futbolista pateando" src="jugador_01.webm" data-src="jugador_01.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer" data-face="left" aria-label="Jugador 2">
-        <video poster="jugador_02.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="0.10" data-kick-contact="0.46" data-kick-reset="0.60" data-kick-rate="1.00" aria-label="Jugador derecho de Visorías 1 — video nuevo" data-src="jugador_02.webm"></video>
+        <video poster="jugador_02.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="0.10" data-kick-contact="0.46" data-kick-reset="0.60" data-kick-rate="1.00" aria-label="Jugador derecho de Visorías 1 — video nuevo" src="jugador_02.webm" data-src="jugador_02.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelLeft">
@@ -2279,10 +2323,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection2" id="academia">
       <button class="player sectionPlayer sectionPlayerLeft right bodyVideoPlayer" data-face="right" aria-label="Jugador 3">
-        <video poster="jugador_03.png" preload="none" class="bodyKickerVideo" muted playsinline data-source="futvideonegro" aria-label="Futbolista de video 3" data-src="jugador_03.webm"></video>
+        <video poster="jugador_03.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-source="futvideonegro" aria-label="Futbolista de video 3" src="jugador_03.webm" data-src="jugador_03.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer" data-face="left" aria-label="Jugador 4">
-        <video poster="jugador_04.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" data-src="jugador_04.webm"></video>
+        <video poster="jugador_04.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" src="jugador_04.webm" data-src="jugador_04.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelRight">
@@ -2307,10 +2351,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection3" id="favoritos">
       <button class="player sectionPlayer sectionPlayerLeft right bodyVideoPlayer" data-face="right" aria-label="Jugador 5">
-        <video poster="jugador_05.png" preload="none" class="bodyKickerVideo playerWhiteLarge" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador blanco grande del lado izquierdo" data-src="jugador_05.webm"></video>
+        <video poster="jugador_05.png" preload="metadata" class="bodyKickerVideo playerWhiteLarge" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador blanco grande del lado izquierdo" src="jugador_05.webm" data-src="jugador_05.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer" data-face="left" aria-label="Jugador 6">
-        <video poster="jugador_04.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" data-src="jugador_04.webm"></video>
+        <video poster="jugador_04.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" src="jugador_04.webm" data-src="jugador_04.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelLeft">
@@ -2323,10 +2367,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection4" id="alto-rendimiento">
       <button class="player sectionPlayer sectionPlayerLeft right bodyVideoPlayer cloneSizeFrom1" data-face="right" aria-label="Jugador 7">
-        <video poster="jugador_01.png" preload="none" class="bodyKickerVideo" muted playsinline aria-label="Futbolista pateando" data-src="jugador_01.webm"></video>
+        <video poster="jugador_01.png" preload="metadata" class="bodyKickerVideo" muted playsinline aria-label="Futbolista pateando" src="jugador_01.webm" data-src="jugador_01.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer cloneSizeFrom1" data-face="left" aria-label="Jugador 8">
-        <video poster="jugador_02.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="0.10" data-kick-contact="0.46" data-kick-reset="0.60" data-kick-rate="1.00" aria-label="Jugador derecho de Visorías 1 — video nuevo" data-src="jugador_02.webm"></video>
+        <video poster="jugador_02.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="0.10" data-kick-contact="0.46" data-kick-reset="0.60" data-kick-rate="1.00" aria-label="Jugador derecho de Visorías 1 — video nuevo" src="jugador_02.webm" data-src="jugador_02.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelRight academyWide">
@@ -2348,10 +2392,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection5" id="entrenamiento">
       <button class="player sectionPlayer sectionPlayerLeft right bodyVideoPlayer cloneSizeFrom2" data-face="right" aria-label="Jugador 9">
-        <video poster="jugador_03.png" preload="none" class="bodyKickerVideo" muted playsinline data-source="futvideonegro" aria-label="Futbolista de video 3" data-src="jugador_03.webm"></video>
+        <video poster="jugador_03.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-source="futvideonegro" aria-label="Futbolista de video 3" src="jugador_03.webm" data-src="jugador_03.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer cloneSizeFrom2" data-face="left" aria-label="Jugador 10">
-        <video poster="jugador_04.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" data-src="jugador_04.webm"></video>
+        <video poster="jugador_04.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" src="jugador_04.webm" data-src="jugador_04.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelLeft academyWide">
@@ -2370,10 +2414,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection6" id="ruta">
       <button class="player sectionPlayer sectionPlayerLeft right bodyVideoPlayer cloneSizeFrom3" data-face="right" aria-label="Jugador 11">
-        <video poster="jugador_05.png" preload="none" class="bodyKickerVideo playerWhiteLarge" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador blanco grande del lado izquierdo" data-src="jugador_05.webm"></video>
+        <video poster="jugador_05.png" preload="metadata" class="bodyKickerVideo playerWhiteLarge" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador blanco grande del lado izquierdo" src="jugador_05.webm" data-src="jugador_05.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer cloneSizeFrom3" data-face="left" aria-label="Jugador 12">
-        <video poster="jugador_04.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" data-src="jugador_04.webm"></video>
+        <video poster="jugador_04.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" src="jugador_04.webm" data-src="jugador_04.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelRight academyWide">
@@ -2390,10 +2434,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
 
     <section class="academySection academySection7" id="inscripciones">
       <button class="player sectionPlayer sectionPlayerLeft right bodyVideoPlayer cloneSizeFrom1" data-face="right" aria-label="Jugador 13">
-        <video poster="jugador_01.png" preload="none" class="bodyKickerVideo" muted playsinline aria-label="Futbolista pateando" data-src="jugador_01.webm"></video>
+        <video poster="jugador_01.png" preload="metadata" class="bodyKickerVideo" muted playsinline aria-label="Futbolista pateando" src="jugador_01.webm" data-src="jugador_01.webm"></video>
       </button>
       <button class="player sectionPlayer sectionPlayerRight left bodyVideoPlayer cloneSizeFrom1" data-face="left" aria-label="Jugador 14">
-        <video poster="jugador_02.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="0.10" data-kick-contact="0.46" data-kick-reset="0.60" data-kick-rate="1.00" aria-label="Jugador derecho de Visorías 1 — video nuevo" data-src="jugador_02.webm"></video>
+        <video poster="jugador_02.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="0.10" data-kick-contact="0.46" data-kick-reset="0.60" data-kick-rate="1.00" aria-label="Jugador derecho de Visorías 1 — video nuevo" src="jugador_02.webm" data-src="jugador_02.webm"></video>
       </button>
 
       <div class="academyPanel academyPanelCenter academyFinalCard">
@@ -2435,10 +2479,10 @@ footer .footerPlayer .bodyKickerVideo.playerWhiteLarge{
   <h2> CONTINÚA.</h2>
   <br>
   <button class="player footerPlayer right bodyVideoPlayer" data-face="right" style="left:8%;top:22%;" aria-label="Jugador 9">
-        <video poster="jugador_05.png" preload="none" class="bodyKickerVideo playerWhiteLarge" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador blanco grande del lado izquierdo" data-src="jugador_05.webm"></video>
+        <video poster="jugador_05.png" preload="metadata" class="bodyKickerVideo playerWhiteLarge" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador blanco grande del lado izquierdo" src="jugador_05.webm" data-src="jugador_05.webm"></video>
       </button>
   <button class="player footerPlayer left bodyVideoPlayer" data-face="left" style="left:70%;top:22%;" aria-label="Jugador 10">
-        <video poster="jugador_04.png" preload="none" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" data-src="jugador_04.webm"></video>
+        <video poster="jugador_04.png" preload="metadata" class="bodyKickerVideo" muted playsinline data-kick-start="3.20" data-kick-contact="3.85" data-kick-reset="4.55" data-kick-rate="1.55" aria-label="Jugador negro del lado derecho" src="jugador_04.webm" data-src="jugador_04.webm"></video>
       </button>
   <div class="goal"></div>
 
@@ -2517,16 +2561,10 @@ const kickerObserver=new IntersectionObserver(entries=>{
       /* Fuera de pantalla: pausa el decoder. El poster mantiene la imagen del jugador. */
       if(!v.closest('.sectionPlayer')?.classList.contains('kick')){
         freezeKicker(v);
-        /* En móvil, descargar el recurso del elemento para liberar memoria/decoder.
-           El navegador conserva el archivo en caché y data-src permite recargarlo. */
-        if(window.matchMedia('(max-width:800px)').matches && v.getAttribute('src')){
-          v.removeAttribute('src');
-          try{ v.load(); }catch(e){}
-        }
       }
     }
   });
-},{rootMargin:'45% 0px 45% 0px',threshold:0.01});
+},{rootMargin:'20% 0px 20% 0px',threshold:0.01});
 
 bodyKickerVideos.forEach(v=>kickerObserver.observe(v));
 const hint=document.getElementById('hint');
@@ -2802,8 +2840,45 @@ function performExactPlayerPass(player){
       shot.onfinish=()=>{
         player.classList.remove('kick');
         setBall(to.x,to.y);
-        busy=false;
-        rollSlow();
+
+        /* REGLA FINAL:
+           SI la pelota llega al pie de otro jugador,
+           ese jugador SIEMPRE reacciona en ese instante,
+           sin importar si el pase empezó por toque en la pelota,
+           toque en un jugador o movimiento automático. */
+        if(receiver){
+          busy=false;
+
+          const rv=receiver.querySelector('.bodyKickerVideo');
+          if(rv){
+            ensureKickerLoaded(rv);
+
+            const fireReceiver=()=>{
+              if(busy || !landed) return;
+              performExactPlayerPass(receiver);
+            };
+
+            /* Si el video ya está listo, reacción casi inmediata.
+               Si aún está cargando, esperar solo lo necesario y disparar. */
+            if(rv.readyState >= 2){
+              setTimeout(fireReceiver,35);
+            }else{
+              const onReady=()=>{
+                rv.removeEventListener('canplay',onReady);
+                setTimeout(fireReceiver,20);
+              };
+              rv.addEventListener('canplay',onReady,{once:true});
+              try{ rv.load(); }catch(e){}
+            }
+          }else{
+            setTimeout(()=>{
+              if(!busy && landed) performExactPlayerPass(receiver);
+            },35);
+          }
+        }else{
+          busy=false;
+          rollSlow();
+        }
       };
     };
 
@@ -3318,6 +3393,10 @@ function launchVisualBallAgain(){
 }
 
 function headerFrame(now){
+  if(typeof v52HeaderVisible!=='undefined' && !v52HeaderVisible){
+    requestAnimationFrame(headerFrame);
+    return;
+  }
   const elapsed=now-HEADER_START;
   const cycle=Math.floor(elapsed/HEADER_PERIOD);
   const t=(elapsed%HEADER_PERIOD)/HEADER_PERIOD;
@@ -3418,6 +3497,25 @@ if(headerVideo){
   headerVideo.addEventListener('ended',parkHeaderVideoAtStart);
 }
 
+
+/* V52 — PAUSA REAL DEL HEADER CUANDO ESTÁ FUERA DE PANTALLA */
+let v52HeaderVisible=true;
+const v52HeaderObserver=new IntersectionObserver(entries=>{
+  const entry=entries[0];
+  v52HeaderVisible=!!entry?.isIntersecting;
+  if(!v52HeaderVisible){
+    try{headerVideo?.pause();}catch(e){}
+    try{headerGhostBall?.getAnimations().forEach(a=>a.cancel());}catch(e){}
+    if(headerGhostBall){
+      headerGhostBall.style.opacity='0';
+      headerGhostBall.style.left='-9999px';
+      headerGhostBall.style.top='-9999px';
+    }
+    try{hideVideoBallOverlay();}catch(e){}
+  }
+},{threshold:0.01});
+v52HeaderObserver.observe(document.getElementById('hero'));
+
 requestAnimationFrame(headerFrame);
 
 
@@ -3432,6 +3530,16 @@ requestAnimationFrame(headerFrame);
 ========================================================= */
 const V33_STADIUM_URL="estadio.mp4";
 const v33FieldVideos=[...document.querySelectorAll('.bodyFieldVideo,.footerFieldVideo')];
+v33FieldVideos.forEach(v=>{
+  if(!v.getAttribute('src')){
+    v.src=V33_STADIUM_URL;
+    v.preload='metadata';
+    v.muted=true;
+    v.loop=true;
+    v.playsInline=true;
+    try{v.load();}catch(e){}
+  }
+});
 const v33ActiveFieldVideos=new Set();
 const v33Epoch=performance.now();
 
@@ -3561,6 +3669,52 @@ setInterval(()=>{
     window.open('https://wa.me/523343340062?text='+encodeURIComponent(msg),'_blank','noopener');
   });
 })();
+
+
+/* V53 — PAUSA MULTIMEDIA CUANDO LA PESTAÑA NO ESTÁ VISIBLE */
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){
+    bodyKickerVideos.forEach(v=>{try{v.pause();}catch(e){}});
+    v33ActiveFieldVideos?.forEach(v=>{try{v.pause();}catch(e){}});
+    try{headerVideo?.pause();}catch(e){}
+  }else{
+    v33ActiveFieldVideos?.forEach(v=>{try{v.play()?.catch?.(()=>{});}catch(e){}});
+  }
+});
+
+
+/* ===== V55 — RESCATE MÓVIL =====
+   Algunos navegadores móviles pueden bloquear play() aun con muted.
+   En el primer toque se reanudan SOLO los videos visibles/activos.
+*/
+let v55Unlocked=false;
+function v55UnlockMedia(){
+  if(v55Unlocked)return;
+  v55Unlocked=true;
+
+  document.querySelectorAll('.bodyKickerVideo').forEach(v=>{
+    try{
+      v.muted=true;
+      v.playsInline=true;
+      if(!v.getAttribute('src') && v.dataset.src){
+        v.src=v.dataset.src;
+        v.preload='metadata';
+        v.load();
+      }
+    }catch(e){}
+  });
+
+  v33ActiveFieldVideos.forEach(v=>{
+    try{
+      v.muted=true;
+      v.playsInline=true;
+      const p=v.play();
+      if(p && p.catch)p.catch(()=>{});
+    }catch(e){}
+  });
+}
+window.addEventListener('touchstart',v55UnlockMedia,{once:true,passive:true});
+window.addEventListener('pointerdown',v55UnlockMedia,{once:true,passive:true});
 
 </script>
 
