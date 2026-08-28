@@ -2983,10 +2983,11 @@ function nearestPlayerToBall(){
   })[0];
 }
 
-/* ESTA ES LA ÚNICA FUNCIÓN DE PASE.
-   Se usa tanto si haces clic al jugador como si haces clic a la pelota,
-   y también cuando pasan ~5–6 segundos sin interacción. */
-function performExactPlayerPass(player){
+/* ESTA ES LA ÚNICA FUNCIÓN DE PASE DEL BODY.
+   Se usa si haces clic al jugador, si haces clic a la pelota
+   y también cuando pasan ~5–6 segundos sin interacción.
+   Cada activación hace una jugada corta y después vuelve a dejar la pelota libre. */
+function performExactPlayerPass(player, chainDepth=0){
   if(!player || busy || !landed)return;
 
   busy=true;
@@ -3026,9 +3027,12 @@ function performExactPlayerPass(player){
       p.dataset.face!==player.dataset.face
     );
 
+    /* Una activación hace una jugada corta, no una cadena infinita:
+       primer jugador -> posible receptor; el receptor devuelve/patea al espacio
+       y la pelota vuelve a quedar libre. */
     let receiver=null;
 
-    if(candidates.length){
+    if(chainDepth < 1 && candidates.length){
       /* Elegimos al jugador contrario más cercano en ALTURA,
          para que sea el que está "enfrente", no uno arriba/abajo al azar. */
       receiver=candidates.sort((a,b)=>{
@@ -3088,7 +3092,7 @@ function performExactPlayerPass(player){
           busy=false;
 
           if(!busy && landed){
-            performExactPlayerPass(receiver);
+            performExactPlayerPass(receiver, chainDepth + 1);
           }
         }else{
           busy=false;
